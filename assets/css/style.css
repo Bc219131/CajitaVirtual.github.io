@@ -238,10 +238,11 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  background: url("../img/carrusel/kindongheart.jpg") top center;
   background-size: cover;
 }
 
