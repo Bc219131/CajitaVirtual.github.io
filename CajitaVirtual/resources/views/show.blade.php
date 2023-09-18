@@ -7,13 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Vistra blade</h1>
-    <h2>Listado de Juegos</h2>
-    @forelse ($games as $item)
-        <li>{{$item}}</li> 
-    @empty
-        <li>No hay datos</li>
-    @endforelse
-       
+    @if($categoryGame)
+    <h1>El nombre del video juego es: {{$nameVideogame}} y la categoria es: {{$categoryGame}}</h1>
+    @else
+    <h1>El nombre del video juego es: {{$nameVideogame}}</h1>
+    @endif
+
+    <h3>{{$fecha}}</h3>
 </body>
 </html>

@@ -8,20 +8,19 @@ class GamesController extends Controller
 {
     //
     public function index (){
-        return "Juegos comprados";
+        $videogames = array('Fifa','NBA','Mario Kart','Super Mario');
+        return view('index',['games'=>$videogames]);
     }
 
     public function create (){
-        return " Crear formulario de Juegos para inclir en la página";
+        return view('create');
     }
 
     public function help ($name_game, $categoria=null){
-        if($categoria){
-            return "Juegos comprados: " .$name_game. " que pertenece a la categoria de: " .$categoria;
-        }
-        else{
-            return "Juegos comprados: " .$name_game;
-        }
+        $date = Now();
+        return view('show',['nameVideogame'=>$name_game,
+                            'categoryGame'=>$categoria,
+                            'fecha'=>$date]);
     }
 }
 
